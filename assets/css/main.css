@@ -2232,8 +2232,10 @@ input, select, textarea {
 			}
 
 		.image.avatar {
-			border-radius: 100%;
-			overflow: hidden;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			object-fit: cover;
 		}
 
 			.image.avatar img {
@@ -2241,6 +2243,28 @@ input, select, textarea {
 				display: block;
 				width: 100%;
 			}
+
+						.circle-crop {
+							width: 200px;
+							/* Diameter of the circle (adjust as needed) */
+							height: 200px;
+							/* Must match width for a perfect circle */
+							border-radius: 50%;
+							/* Creates the circular shape */
+							overflow: hidden;
+							/* Hides parts of the image outside the circle */
+							display: inline-block;
+							/* Or flex/grid as needed for your layout */
+						}
+			
+						.circle-crop img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							/* Ensures the image covers the area without distortion */
+							object-position: center;
+							/* Centers the image in the circle (adjust if needed) */		  }
+
 
 		.image.main {
 			display: block;
@@ -2251,6 +2275,8 @@ input, select, textarea {
 			.image.main img {
 				border-radius: 0;
 			}
+
+
 
 /* List */
 
